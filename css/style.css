@@ -134,9 +134,11 @@ img.animated.pulse {
     margin-top: -85px;
     padding-top: 12rem;
     padding-bottom: 6rem;
-    background: #fff center center no-repeat;
+    background: #ffff center center no-repeat;
     background-size: cover;
 }
+
+
 
 .hero-header::before {
     position: absolute;
@@ -145,7 +147,8 @@ img.animated.pulse {
     height: 100%;
     top: 0;
     left: 0;
-    background: hsla(0, 25%, 98%, 0.992);
+    /* background: hsla(0, 25%, 98%, 0.992); */
+    background: white;
     /* background-image: url(/img/organic-soil.png); */
     clip-path:  hsla(0, 0%, 100%, 0.992);
 }
@@ -240,13 +243,40 @@ img.animated.pulse {
 
 
 /*** Product ***/
-.product-item {
-    transition: .1s;
+
+
+.products {
+    position: relative;
+    background: url(../img/bg.png) center center no-repeat;
+    background-size: cover;
 }
 
+.products::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .1);
+    clip-path: polygon(66% 0, 100% 0, 100% 100%, 33% 100%);
+}
+
+.product-item {
+    transition: .1s;
+    border-radius: 8px;
+    border-width: 1.5px !important;
+}
+
+
 .product-item:hover {
-    border-width: 0 !important;
+    border-width: 4px !important;
     box-shadow: 0 0 35px rgba(144, 188, 121, .25);
+    cursor: pointer;
+}
+
+.product-item img {
+    background-size: cover;
 }
 
 .product-item:hover a.btn {
@@ -258,8 +288,8 @@ img.animated.pulse {
 /*** Testimonial ***/
 .testimonial {
     position: relative;
-    background: url(../img/bg.png) center center no-repeat;
-    background-size: cover;
+    /* background: url(../img/bg.png) center center no-repeat; */
+    /* background-size: cover; */
 }
 
 .testimonial::before {
@@ -303,13 +333,15 @@ img.animated.pulse {
     align-items: center;
     justify-content: center;
     background: transparent;
-    border: 3px solid rgba(255, 255, 255, .2);
+    border: 3px solid var(--bs-primary);
+    color: var(--bs-dark);;
     border-radius: 30px;
     transition: .5s;
 }
 
 .testimonial-carousel .owl-dot.active {
     background: var(--bs-dark);
+    color: var(--bs-white);
 }
 
 
@@ -377,18 +409,25 @@ img.animated.pulse {
 
 
 /*** Footer ***/
+
+
+.footer {
+      background: url(../img/bg.png) center center no-repeat; 
+     background-size: cover; 
+}
+
 .footer .btn.btn-link {
     display: block;
     margin-bottom: 10px;
     padding: 0;
     text-align: left;
-    color: var(--bs-body);
+    color: var(--bs-white);
     font-weight: normal;
     transition: .3s;
 }
 
 .footer .btn.btn-link:hover {
-    color: var(--bs-primary);
+    /* color: var(--bs-primary); */
 }
 
 .footer .btn.btn-link::before {
@@ -410,17 +449,17 @@ img.animated.pulse {
 }
 
 .footer .copyright a {
-    color: var(--bs-body);
+    color: var(--bs-white);
 }
 
 .footer .copyright a:hover {
-    color: var(--bs-primary);
+    color: var(--bs-white);
 }
 
 .footer .footer-menu a {
     margin-right: 15px;
     padding-right: 15px;
-    border-right: 3px solid var(--bs-light);
+    border-right: 3px solid var(--bs-white);
 }
 
 .footer .footer-menu a:last-child {

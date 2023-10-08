@@ -20,8 +20,11 @@
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
             $('.sticky-top').addClass('bg-primary shadow-sm').css('top', '0px');
+            $('.nav-link').css('color', 'white')
         } else {
             $('.sticky-top').removeClass('bg-primary shadow-sm').css('top', '-150px');
+            $('.nav-link').css('color', 'black')
+
         }
     });
     
@@ -35,7 +38,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({scrollTop: 0}, 100, 'easeInOutExpo');
         return false;
     });
 
